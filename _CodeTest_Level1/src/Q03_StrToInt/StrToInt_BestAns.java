@@ -26,7 +26,7 @@ public class StrToInt_BestAns {
 		}
 		System.out.println(result);
 		return Sign ? 1 : -1 * result;
-	}
+	}// getStrToInt END
 	
 	// 아래는 테스트로 출력해 보기 위한 코드입니다.
 	
@@ -34,5 +34,5 @@ public class StrToInt_BestAns {
 		StrToInt_BestAns strToInt = new StrToInt_BestAns();
 		
 		System.out.println(strToInt.getStrToInt("-1234"));
-	}
-}
+	}// main END
+}// class END

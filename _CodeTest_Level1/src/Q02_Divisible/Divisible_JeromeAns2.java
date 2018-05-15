@@ -31,7 +31,7 @@ public class Divisible_JeromeAns2 {
 		}
 		
 		return ret;
-	}
+	}// divisible END
 	
 	// 아래는 테스트로 출력해 보기 위한 코드입니다.
 	
@@ -39,5 +39,5 @@ public class Divisible_JeromeAns2 {
 		Divisible_JeromeAns2 div = new Divisible_JeromeAns2();
 		int[] array = {5, 9, 7, 10};
 		System.out.println(Arrays.toString(div.divisible(array, 5)));
-	}
-}
+	}// main END
+}// class END

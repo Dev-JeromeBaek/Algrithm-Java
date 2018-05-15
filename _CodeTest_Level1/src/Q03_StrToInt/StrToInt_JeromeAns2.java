@@ -30,7 +30,7 @@ public class StrToInt_JeromeAns2 {
 		}
 		if (!plus) num = -num;
 		return num;
-	}
+	}// getStrToInt END
 	
 	// 아래는 테스트로 출력해 보기 위한 코드입니다.
 	
@@ -38,5 +38,5 @@ public class StrToInt_JeromeAns2 {
 		StrToInt_JeromeAns2 strToInt = new StrToInt_JeromeAns2();
 		
 		System.out.println(strToInt.getStrToInt("-1234"));
-	}
-}
+	}// main END
+}// class END

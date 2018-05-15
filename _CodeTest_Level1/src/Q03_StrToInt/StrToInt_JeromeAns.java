@@ -15,7 +15,7 @@ public class StrToInt_JeromeAns {
 	
 	public int getStrToInt(String str) {
 		return Integer.parseInt(str);
-	}
+	}// getStrToInt END
 	
 	// 아래는 테스트로 출력해 보기 위한 코드입니다.
 	
@@ -23,5 +23,5 @@ public class StrToInt_JeromeAns {
 		StrToInt_JeromeAns strToInt = new StrToInt_JeromeAns();
 		
 		System.out.println(strToInt.getStrToInt("-1234"));
-	}
-}
+	}// main END
+}// class END

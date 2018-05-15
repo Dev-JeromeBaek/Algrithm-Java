@@ -18,7 +18,7 @@ public class Divisible_BestAns {
 		// ret에 array에 포함된 정수중, divisor로 나누어 떨어지는 숫자를 순서대로 넣으세요.
 		
 		return Arrays.stream(array).filter(factor -> factor % divisor == 0).toArray();
-	}
+	}// divisible END
 	
 	// 아래는 테스트로 출력해 보기 위한 코드입니다.
 	
@@ -26,5 +26,5 @@ public class Divisible_BestAns {
 		Divisible_BestAns div = new Divisible_BestAns();
 		int[] array = {5, 9, 7, 10};
 		System.out.println(Arrays.toString(div.divisible(array, 5)));
-	}
-}
+	}// main END
+}// class END
