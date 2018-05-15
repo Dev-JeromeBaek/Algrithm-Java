@@ -1,5 +1,7 @@
 package Q04_GcdLcm;
 
+import java.util.Arrays;
+
 public class GcdLcm {
 	
 	/*
@@ -12,4 +14,16 @@ public class GcdLcm {
      * str은 부호(+,-)와 숫자로만 구성되어 있고, 잘못된 값이 입력되는 경우는 없습니다.
 	 */
 	
+	public int[] gcdlcm(int a, int b) {
+		int[] answer = new int[2];
+		
+		return answer;
+	}
+	
+	// 아래는 테스트로 출력해 보기 위한 코드입니다.
+	public static void main(String[] args) {
+		GcdLcm c = new GcdLcm();
+		
+		System.out.println(Arrays.toString(c.gcdlcm(3, 12)));
+	}
 }
