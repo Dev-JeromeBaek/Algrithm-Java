@@ -1,8 +1,5 @@
 package Q05_ReverseStr;
 
-import java.util.Arrays;
-import java.util.Collections;
-
 public class ReverseStr_JeromeAns {
 
 	/*

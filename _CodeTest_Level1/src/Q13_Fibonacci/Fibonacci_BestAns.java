@@ -16,7 +16,13 @@ public class Fibonacci_BestAns {
 	
 	public long fibonacci(int num) {
 		long answer = 0;
-		
+		if (num==1||num==2) {
+			answer = 1;
+		} else {
+			long fn1 = fibonacci(num-1);
+			long fn2 = fibonacci(num-2);
+			answer = fn2 + fn1;
+		}
 		return answer;
 	}
 	
