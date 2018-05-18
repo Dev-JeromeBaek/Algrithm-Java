@@ -1,7 +1,5 @@
 package Q02_GetMinSum;
 
-import java.util.Arrays;
-
 public class GetMinSum {
 	
 	/*

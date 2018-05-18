@@ -32,5 +32,4 @@ public class Fibonacci_BestAns {
 		int testCase = 3;
 		System.out.println(c.fibonacci(testCase));
 	}
-
 }

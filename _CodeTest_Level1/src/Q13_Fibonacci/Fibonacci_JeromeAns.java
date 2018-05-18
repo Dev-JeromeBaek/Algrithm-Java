@@ -30,5 +30,4 @@ public class Fibonacci_JeromeAns {
 		int testCase = 3;
 		System.out.println(c.fibonacci(testCase));
 	}
-
 }

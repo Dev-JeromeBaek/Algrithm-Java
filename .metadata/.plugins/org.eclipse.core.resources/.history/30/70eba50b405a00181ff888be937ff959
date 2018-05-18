@@ -1,0 +1,15 @@
+package Lesson01_Iterations;
+
+public class BinaryGap {
+	
+	public int solution(int N) {
+		
+		return 0;
+	}
+	
+	public static void main(String[] args) {
+		BinaryGap test = new BinaryGap();
+		System.out.println(test.solution(2232));
+	}
+
+}
