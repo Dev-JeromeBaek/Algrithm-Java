@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="Q04_GcdLcm.GcdLcm"/>
+<fullyQualifiedTypeName name="Q05_ReverseStr.ReverseStr"/>
+<fullyQualifiedTypeName name="java.lang.Character"/>
+<fullyQualifiedTypeName name="java.util.Collection"/>
+<fullyQualifiedTypeName name="java.util.Collections"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+<fullyQualifiedTypeName name="java.lang.StringBuffer"/>
+<fullyQualifiedTypeName name="Q06_GetMean.GetMean"/>
+<fullyQualifiedTypeName name="java.beans.Encoder"/>
+<fullyQualifiedTypeName name="Q07_EvenOrOdd.EvenOrOdd"/>
+<fullyQualifiedTypeName name="Q01_ReverseInt.ReverseInt"/>
+<fullyQualifiedTypeName name="Q03_NumOfPrime.NumOfPrime"/>
+<fullyQualifiedTypeName name="Q04_ProductMatrix.ProductMatrix"/>
+<fullyQualifiedTypeName name="Q05_Collatz.Collatz"/>
+<fullyQualifiedTypeName name="Q07_GetDayName.GetDayName"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="Lesson01_BinaryGap.BinaryGap"/>
+<fullyQualifiedTypeName name="Lesson02_Arrays.CyclicRotation"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="Lesson02_Arrays.OddOccurrencesInArray"/>
+<fullyQualifiedTypeName name="Lesson03_TimeComplexity.L31_Frogjmp"/>
+<fullyQualifiedTypeName name="java.lang.Readable"/>
+</qualifiedTypeNameHistroy>

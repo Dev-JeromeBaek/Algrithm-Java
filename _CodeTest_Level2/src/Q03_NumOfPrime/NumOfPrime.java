@@ -26,5 +26,4 @@ public class NumOfPrime {
 		NumOfPrime prime = new NumOfPrime();
 		System.out.println(prime.numberOfPrime(10));
 	}
-
 }

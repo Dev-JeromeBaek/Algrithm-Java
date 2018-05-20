@@ -1,0 +1,22 @@
+
+public class Q4 {
+	
+	public int solution(int A, int B, int C, int D) {
+        // write your code in Java SE 8
+		double a = Math.sqrt(Math.pow(Math.abs(B-A),2) + Math.pow(Math.abs(D-C), 2));
+		double b = Math.sqrt(Math.pow(Math.abs(A-D),2) + Math.pow(Math.abs(C-B), 2));
+		double c = Math.sqrt(Math.pow(Math.abs(C-A),2) + Math.pow(Math.abs(D-B), 2));
+		System.out.println("a : " + a);
+		System.out.println("b : " + b);
+		System.out.println("c : " + c);
+		return (int) a;
+    }
+	
+	public static void main(String[] args) {
+		Q4 q = new Q4();
+		System.out.println(q.solution(1, 1, 2, 3));
+		
+		System.out.println(q.solution(2, 4, 2, 4));
+		
+	}// main END
+}// class END

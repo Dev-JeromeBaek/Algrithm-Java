@@ -1,0 +1,28 @@
+import java.util.*;
+
+public class Q1 {
+	
+	public int solution(String S) {
+		
+		String[] strArr = S.split(" ");
+		ArrayList<Integer> intArr = new ArrayList<>();
+		System.out.println(Arrays.toString(strArr));
+		
+//		for (int i=0; i<strArr.length; i++) {
+//			intArr[i] = Integer.parseInt(strArr[i]);
+//		}
+		
+		
+		
+		
+		
+		// 마지막 배열 값 반환
+		return 0;
+	}
+	
+	public static void main(String[] args) {
+		Q1 q = new Q1();
+		String string = "13 DUP 4 POP 5 DUP + DUP + -";
+		System.out.println(q.solution(string));
+	}// main END
+}// class END

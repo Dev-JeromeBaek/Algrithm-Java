@@ -1,0 +1,16 @@
+
+public class Q2 {
+	
+	public int solution(String A, String B) {
+        // write your code in Java SE 8
+		
+		return 0;
+    }
+	
+	public static void main(String[] args) {
+		Q2 q = new Q2();
+		String a = "";
+		String b = "";
+		System.out.println(q.solution(a, b));
+	}// main END
+}// class END

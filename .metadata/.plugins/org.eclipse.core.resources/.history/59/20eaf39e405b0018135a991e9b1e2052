@@ -1,0 +1,13 @@
+
+public class Q1 {
+	
+	public String solution() {
+		
+		return "test";
+	}
+	
+	public static void main(String[] args) {
+		Q1 q = new Q1();
+		System.out.println(q.solution());
+	}// main END
+}// class END

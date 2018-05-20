@@ -32,5 +32,4 @@ public class NumOfPrime_JeromeAns {
 		NumOfPrime_JeromeAns prime = new NumOfPrime_JeromeAns();
 		System.out.println(prime.numberOfPrime(10));
 	}
-
 }

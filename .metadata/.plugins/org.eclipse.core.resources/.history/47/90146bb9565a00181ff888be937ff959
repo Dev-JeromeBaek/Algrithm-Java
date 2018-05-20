@@ -1,0 +1,43 @@
+package Lesson02_Arrays;
+
+// you can also use imports, for example:
+// import java.util.*;
+
+// you can write to stdout for debugging purposes, e.g.
+// System.out.println("this is a debug message");
+
+public class OddOccurrencesInArray_JeromeAns2 {
+	
+	public int solution(int[] A) {
+        // write your code in Java SE 8
+		int result = 0;
+		boolean check = false;
+		for (int i=0; i<A.length; i++) {
+			if (A[i] != -1) {
+				for (int j=0; j<A.length; j++) {
+					if (i != j && A[j] != -1) {
+						if (A[i] == A[j]) {
+							check = false;
+							A[i] = -1;
+							A[j] = -1;
+							break;
+						} else {
+							check = true;
+						}
+					}
+				}
+				if (check) {
+					result += A[i];
+				}
+			}
+		}
+		return result;
+    }
+	
+	public static void main(String[] args) {
+		OddOccurrencesInArray_JeromeAns2 test = new OddOccurrencesInArray_JeromeAns2();
+		int[] array = {9, 3, 9, 3, 9, 7, 9};
+		System.out.println(test.solution(array));
+	}
+	// 이렇게 풀고 55점 받음.. runtime이 문제.. 다른 방법으로 풀어보자
+}

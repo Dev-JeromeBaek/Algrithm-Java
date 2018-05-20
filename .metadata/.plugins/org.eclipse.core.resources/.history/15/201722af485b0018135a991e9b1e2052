@@ -1,0 +1,78 @@
+import java.util.*;
+
+public class Q11 {
+	
+	public int solution(String S) {
+		
+		int result = 0;
+		
+		String[] strArr = S.split("\\p{Z}");
+		LinkedList<Integer> list = new LinkedList<>();
+		System.out.println(Arrays.toString(strArr));
+		String s = strArr[0];
+		System.out.println(s);
+		System.out.println(s.equals("DUP") || s.equals("POP") || s.equals("+") || s.equals("-"));
+		if(s.equals("DUP") || s.equals("POP") || s.equals("+") || s.equals("-")) {
+			list.clear();
+		} else {
+			boolean numcheck = false;
+			for (int i=0; i<strArr.length; i++) {
+				if(strArr[i].equals(strArr[i-1])) {
+					list.clear();
+				} else {
+					if(strArr[i].equals("DUP")) {
+						list.push(list.get(0));
+					} else if(strArr[i].equals("POP")) {
+						list.pop();
+					} else if(strArr[i].equals("+")) {
+						int temp = list.get(1) + list.get(0);
+						list.pop();
+						// 规过 1
+						list.add(1, temp);
+						list.pop();
+						// 规过 2
+//							list.pop();
+//							list.push(temp);
+						
+					} else if(strArr[i].equals("-")) {
+						int lastOne = list.get(0);
+						int lastTwo = list.get(1);
+						int temp = lastTwo >= lastOne ? lastTwo-lastOne : lastOne-lastTwo;
+						list.pop();
+						// 规过 1
+						list.add(1, temp);
+						list.pop();
+						// 规过 2
+//							list.pop();
+//							list.push(temp);
+						
+					} else {
+						list.push(Integer.parseInt(strArr[i]));
+					}
+//					System.out.println(list);
+				}
+			}
+		}
+		
+		result = list.get(0);
+		
+		// 付瘤阜 硅凯 蔼 馆券
+		return result;
+	}
+	
+	public static void main(String[] args) {
+		Q11 q = new Q11();
+		String string = "13 DUP 4 POP 5 DUP + DUP + -";
+		System.out.println(q.solution(string));
+		
+		String string2 = "DUP 13 DUP 4 POP 5 DUP + DUP + -";
+		System.out.println(q.solution(string2));
+		
+		String string3 = "POP DUP 13 DUP 4 POP 5 DUP + DUP + -";
+		System.out.println(q.solution(string3));
+		
+		String string4 = "5 6 + -";
+		System.out.println(q.solution(string4));
+		
+	}// main END
+}// class END

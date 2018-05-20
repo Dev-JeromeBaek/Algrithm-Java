@@ -18,17 +18,7 @@ public class Collatz {
 	
 	public int collatz(int num) {
 		int answer = 0;
-		while (num != 1) {
-			num = num%2==0? num/2 : (num*3)+1;
-			answer++;
-			if(answer == 501) {
-				answer = -1;
-				num=1;
-			}
-			System.out.println(num);
-		}
-		System.out.println(answer);
-		System.out.println(num);
+		
 		return answer;
 	}
 	
