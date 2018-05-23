@@ -42,5 +42,4 @@ public class HarshadNumber_JeromeAns {
 		System.out.println("11 is Harshad? : " + sn.isHarshad(11));
 		System.out.println("13 is Harshad? : " + sn.isHarshad(13));
 	}
-
 }

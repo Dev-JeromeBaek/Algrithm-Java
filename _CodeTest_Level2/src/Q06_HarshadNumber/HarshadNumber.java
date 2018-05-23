@@ -22,7 +22,6 @@ public class HarshadNumber {
 	public boolean isHarshad(int num) {
 		String[] strArr = new String[Integer.toString(num).length()];
 		
-		
 		return true;
 	}
 	
