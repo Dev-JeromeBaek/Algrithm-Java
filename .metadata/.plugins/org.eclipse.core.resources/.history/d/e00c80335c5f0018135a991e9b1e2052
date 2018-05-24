@@ -1,0 +1,31 @@
+package Q01;
+
+import java.util.Scanner;
+
+public class Main {
+	
+	public static final Scanner scan = new Scanner(System.in);
+	
+	public static void main(String[] args) {
+		int result = 0;
+		while(true) {
+			System.out.println("덧셈을 실행할 두 정수를 입력하세요. ex)32 23");
+			try {
+				
+			} catch (NumberFormatException n) {
+				System.out.println("확인 후 다시 입력해주세요.");
+				return;
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+			String inVal = scan.nextLine();
+			String[] strArr = inVal.split("\\s+");
+			for(String each : strArr) {
+				result += Integer.parseInt(each);
+			}
+			
+		}
+		System.out.print(result);
+	}
+	
+}

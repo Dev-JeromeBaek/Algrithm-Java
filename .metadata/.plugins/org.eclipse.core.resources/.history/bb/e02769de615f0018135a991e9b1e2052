@@ -1,0 +1,18 @@
+package Q01;
+
+import java.util.Scanner;
+
+public class Main {
+	
+	public static final Scanner scan = new Scanner(System.in);
+	
+	public static void main(String[] args) {
+		int result = 0;
+		String inVal = scan.nextLine();
+		String[] strArr = inVal.split("\\s+");
+		for(String each : strArr) {
+			result += Integer.parseInt(each);
+		}
+		System.out.print(result);
+	}
+}

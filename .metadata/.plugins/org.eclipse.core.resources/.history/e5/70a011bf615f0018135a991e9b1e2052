@@ -1,0 +1,13 @@
+package Q02;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static final Scanner scan = new Scanner(System.in);
+	
+	public static void main(String[] args) {
+		int num = scan.nextInt();
+		System.out.println(Math.abs(num));
+	}
+}

@@ -1,0 +1,17 @@
+package Q03;
+
+import java.util.Scanner;
+
+public class Main {
+	
+	public static final Scanner scan = new Scanner(System.in);
+
+	public static void main(String[] args) {
+		
+		int arrayLength = scan.nextInt();
+		int[] intArr = new int[arrayLength];
+		
+		String value = scan.nextLine();
+		String[] strArr = value.split("\\s+");
+	}
+}

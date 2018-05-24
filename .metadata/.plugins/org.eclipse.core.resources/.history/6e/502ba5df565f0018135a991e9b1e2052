@@ -1,0 +1,18 @@
+package Q01;
+
+import java.util.Scanner;
+
+public class Main {
+	
+	public static final Scanner scanner = new Scanner(System.in);
+	
+	public static void main(String[] args) {
+		String message = null;
+		System.out.println("메시지를 입력하세요.");
+		
+		message = scanner.nextLine();
+		
+		System.out.println("입력 메시지 : \"" + message + "\"");
+	}
+
+}
