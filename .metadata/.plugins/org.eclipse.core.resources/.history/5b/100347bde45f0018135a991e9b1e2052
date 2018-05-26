@@ -1,0 +1,64 @@
+package Q10;
+
+import java.util.HashSet;
+import java.util.Scanner;
+import java.util.Set;
+
+public class Main {
+
+	/*
+	 * 유일한 수
+	 * 
+	 * [실습 내용]
+	 * 숫자들이 입력되면 짝이 없는 숫자를 찾아내서 출력하는 프로그램을 작성해보세요.
+	 * 
+	 * [입력]
+	 * 첫 줄에는 입력 될 숫자의 총 개수 A를 입력하며, A를 입력하며, A는 홀수여야만 합니다.
+	 * A개의 정수가 공백으로 구분되어 입력되어야 홥니다.
+	 * 
+	 * [출력]
+	 * 짝이 없는 정수를 1쌍 출력합니다.
+	 * 
+	 */
+	
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int length = scan.nextInt();
+		scan.nextLine();
+		int[] intArr = new int[length];
+		for (int i=0; i<intArr.length; i++) {
+			intArr[i] = scan.nextInt();
+		}
+		
+		// 방법 1. XOR연산
+		int result = 0;
+		for (int each : intArr) {
+			result ^= each;
+		}
+		System.out.println(result);
+		
+		// 방법 2. HashSet이용
+		// - Set은 집합적인 개념의 Collection으로 순서의 의미가 없지만 Data를 중복해서 포함할 수 없는 특징을 가지고있다.
+		// 그러면 HashSet의 특징으로는 add() 메소드를 이용해 데이터를 삽입, next()를 이용해 데이터를 추출할 수 있다.
+		// 또한, Iterator를 이용해서 추출할 수 가 있다.
+		Set<Integer> set = new HashSet<>();
+		
+		for (int each : intArr) {
+			if(set.contains(each)) {
+				set.remove(each);
+			} else {
+				set.add(each);
+			}
+		}
+		
+		System.out.println(set.iterator().next());
+		
+	}
+}
+
+
+
+
+
+
+

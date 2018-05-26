@@ -1,0 +1,44 @@
+package Q10;
+
+import java.util.Scanner;
+
+public class Main {
+
+	/*
+	 * 유일한 수
+	 * 
+	 * [실습 내용]
+	 * 숫자들이 입력되면 짝이 없는 숫자를 찾아내서 출력하는 프로그램을 작성해보세요.
+	 * 
+	 * [입력]
+	 * 첫 줄에는 입력 될 숫자의 총 개수 A를 입력하며, A를 입력하며, A는 홀수여야만 합니다.
+	 * A개의 정수가 공백으로 구분되어 입력되어야 홥니다.
+	 * 
+	 * [출력]
+	 * 짝이 없는 정수를 1쌍 출력합니다.
+	 * 
+	 */
+	
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int length = scan.nextInt();
+		scan.nextLine();
+		int[] intArr = new int[length];
+		for(int i=0; i<intArr.length; i++) {
+			intArr[i] = scan.nextInt();
+		}
+		
+		int result = 0;
+		for(int each : intArr) {
+			result ^= each;
+		}
+		System.out.println(result);
+	}
+}
+
+
+
+
+
+
+

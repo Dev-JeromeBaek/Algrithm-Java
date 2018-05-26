@@ -1,0 +1,14 @@
+package Q11;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int coupon = scan.nextInt();
+		int pizza = scan.nextInt();
+		
+	}
+	
+}

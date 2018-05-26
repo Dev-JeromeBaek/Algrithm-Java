@@ -1,0 +1,33 @@
+package Q03;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int inputCount = scan.nextInt();
+		scan.nextLine();
+		
+		String[] strArr = new String[inputCount];
+		
+		for (int i=0; i<strArr.length; i++) {
+			strArr[i] = scan.next();
+			
+			int leftCount = 0;
+			int rightCount = 0;
+			
+			for (int j=0; j<strArr[i].length(); j++) {
+				if(strArr[i].charAt(j) == '(') {
+					leftCount++;
+				} else if (strArr[i].charAt(j) == ')') {
+					rightCount++;
+				}
+			}
+			strArr[i] = leftCount==rightCount ? "YES" : "NO";
+		}
+		
+		for(String each : strArr) System.out.println(each);
+		
+	}
+}

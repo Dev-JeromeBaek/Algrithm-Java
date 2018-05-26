@@ -8,7 +8,7 @@ public class BinaryGap_JeromeAns {
 		int lastIndex = 0;
 		String[] strArr = Integer.toBinaryString(N).toString().split("");
 		System.out.println(Integer.toBinaryString(N).toString());
-//		System.out.println(strArr.length);
+		System.out.println(strArr.length);
 		
 		for (int i=strArr.length-1; i>=0; i--) {
 			if (strArr[i].equals("1")) {

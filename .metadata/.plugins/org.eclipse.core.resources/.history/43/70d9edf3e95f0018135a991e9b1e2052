@@ -1,0 +1,32 @@
+package Q11;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int[] intArr = new int[2];
+		for (int i=0; i<intArr.length; i++) {
+			intArr[i] = scan.nextInt();
+		}
+		int pizza = intArr[0];
+		int coupon = intArr[1];
+		System.out.println(pizza/coupon);
+		
+		int additionalOrder = pizza/coupon;
+		int remainderCoupon = pizza%coupon;
+		
+		while(true) {
+			if(additionalOrder != 0) {
+				pizza += additionalOrder;
+			} else {
+				break;
+			}
+		}
+		
+		// Ãâ·Â
+		System.out.print(pizza);
+	}
+	
+}
