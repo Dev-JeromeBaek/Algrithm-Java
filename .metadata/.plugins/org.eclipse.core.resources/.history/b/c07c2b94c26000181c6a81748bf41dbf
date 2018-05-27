@@ -1,0 +1,62 @@
+import java.util.LinkedList;
+import java.util.Scanner;
+
+public class Q01_Main {
+	
+	public static void main(String[] args) {
+		try(Scanner s = new Scanner(System.in))
+		{
+			int n = s.nextInt();	// 배짱이 인원 수
+			int d = s.nextInt();	// 방향을 나타내는 수
+			int k = s.nextInt();	// 방향에따른 k번째 있는 사람 탈락
+			int j = s.nextInt();	// 
+			
+			//여기부터 작성해 주세요
+			
+			// 인원수 배열 생성
+			LinkedList<Integer> list = new LinkedList<>();
+			
+			// 생존 true / 탈락 false
+			for(int i=0; i<n; i++) {
+				list.add(i);
+			}
+			int result = 0;
+			int startNum = 1;
+			int nextCount = 0;
+			
+			for (int i=0; i<n; i++) {
+				System.out.println("list.size() : " + list.size());
+				System.out.println("nextCount : " + nextCount);
+				if(list.size() != 1) {
+					nextCount = k + startNum;
+					if(nextCount>list.size()) nextCount %= list.size();
+					
+					// 시계 방향
+					if(d == 1) {
+						if(nextCount>=k) {
+							list.remove(nextCount-k);
+						} else {
+							list.remove(nextCount);
+						}
+					// 반시계 방향
+					} else {
+						if(nextCount>=k) {
+							list.remove(list.size()-(nextCount-k));
+						} else {
+							System.out.println(list.size());
+							list.remove(list.size()-nextCount);
+							System.out.println(list.size());
+						}
+					}
+					startNum = nextCount;
+					k += j;
+				// 마지막 사람 출력					
+				} else {
+					result = list.get(0) + 1;
+				}
+			}
+			System.out.println(result);
+			
+		}
+	}
+}

@@ -1,0 +1,53 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Q03_Main {
+	
+	public static void main(String[] args) {
+		try(Scanner s = new Scanner(System.in))
+		{
+			int x1 = s.nextInt();
+			int y1 = s.nextInt();
+			int x2 = s.nextInt();
+			int y2 = s.nextInt();
+			int x3 = s.nextInt();
+			int y3 = s.nextInt();
+			int x4 = s.nextInt();
+			int y4 = s.nextInt();
+			int x5 = s.nextInt();
+			int y5 = s.nextInt();
+			int x6 = s.nextInt();
+			int y6 = s.nextInt();
+			
+			//여기부터 작성해 주세요
+			int[] w_x = {x1, x2, x3, x4, x5, x6};
+			int[] h_y = {y1, y2, y3, y4, y5, y6};
+			Arrays.sort(w_x);
+			Arrays.sort(h_y);
+			int[][] totalArr = new int[w_x[5]][h_y[5]];
+			for (int i=1; i<=totalArr.length; i++) {
+				for (int j=1; j<=totalArr[0].length; j++) {
+					if(i>= x1 && i<= x2 && j>= y1 && j <= y2) {
+						totalArr[i-1][j-1] = 1;
+					}
+					if(i>= x3 && i<= x4 && j>= y3 && j <= y4) {
+						totalArr[i-1][j-1] = 2;
+					}
+					if(i>= x5 && i<= x6 && j>= y5 && j <= y6) {
+						totalArr[i-1][j-1] = 3;
+					}
+				}
+			}
+			
+			int count = 0;
+			for (int i=0; i<totalArr.length; i++) {
+				for (int j=0; j<totalArr[0].length; j++) {
+					System.out.println(totalArr[i][j]+" ");
+					if(totalArr[i][j] == 1) count++;
+				}
+			}
+			System.out.println(count);
+		}
+  }
+
+}

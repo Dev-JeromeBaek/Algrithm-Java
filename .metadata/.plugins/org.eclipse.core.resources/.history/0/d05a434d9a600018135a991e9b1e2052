@@ -1,0 +1,56 @@
+package Q03_Find_Words;
+
+import java.util.*;
+import java.io.*;
+
+public class Main {
+	
+	public static boolean checkA(String s) {
+		int cnt = 0;
+		for (int i=0; i<s.length(); i++) {
+			char c = s.charAt(i);
+			if (c=='a' || c=='e' || c== 'i' || c=='o' || c=='u') {
+				cnt += 1;
+				if (cnt >= 2) {
+					return true;
+				}
+			} else {
+				cnt = 0;
+			}
+		}
+		return false;
+	}
+	
+	public static boolean checkB(String s) {
+		int cnt = 0;
+		for (int i=0; i<s.length(); i++) {
+			char c = s.charAt(i);
+			if (c=='a' || c=='e' || c=='i' || c=='o' || c=='u') {
+				cnt = 0;
+			} else {
+				cnt += 1;
+				if (cnt >= 3) {
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+	
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		
+		int cntA = 0;
+		int cntB = 0;
+		while (scanner.hasNext()) {
+			String word = scanner.next();
+			if(checkA(word)) {
+				cntA += 1;
+			}
+			if(checkB(word)) {
+				cntB += 1;
+			}
+		}
+		System.out.printf("%d\n%d\n", cntA, cntB);
+	}
+}

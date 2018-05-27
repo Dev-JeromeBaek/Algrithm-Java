@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;near_Two_Point&apos; to &apos;Q01_near_Two_Point&apos;&#x0D;&#x0A;- Original project: &apos;Test_2016&apos;&#x0D;&#x0A;- Original element: &apos;Test_2016/src/near_Two_Point&apos;&#x0D;&#x0A;- Renamed element: &apos;Test_2016/src/Q01_near_Two_Point&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;near_Two_Point&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;near_Two_Point" name="Q01_near_Two_Point" qualified="false" references="true" stamp="1527304674817" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,65 @@
+package Q02_Palindrome;
+
+import java.util.*;
+import java.io.*;
+
+public class Main {
+	
+	/* 펠린드룸 넘버 만들기 */
+	
+	public static int r(int n) {
+		int ret = 0;
+		while(n>0) {
+			ret *= 10;
+			ret += n%10;
+			n /= 10;
+		}
+		return ret;
+	}
+	
+	public static int f(int n) {
+		return n + r(n);
+	}
+	
+	public static boolean check(int n) {
+		ArrayList<Integer> digits = new ArrayList<>();
+		while(n>0) {
+			digits.add(n%10);
+			n /= 10;
+		}
+		
+		for (int i=0; i<digits.size()/2; i++) {
+			int left = i;
+			int right = digits.size() - i - 1;
+			if(digits.get(left) != digits.get(right)) {
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		// n을 입력받는다.
+		int n = scanner.nextInt();
+		
+		for (int i=1; i<=4; i++) {
+			n = f(n);
+			
+			// 중단 조건을 만족하면 출력값을 -1로 변환한다.
+			if (i>=4 || n>=1000) {
+				n = -1;
+				break;
+			}
+			
+			// 펠린드룸 넘버가 완성되었다면 탈출한다.
+			if (check(n)) {
+				break;
+			}
+		}
+		
+		// 형식에 맞게 정답을 출력한다.
+		System.out.println(n);
+	}
+
+}

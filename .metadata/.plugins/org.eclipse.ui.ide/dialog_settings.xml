@@ -8,8 +8,14 @@
 			<item value=""/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value="C:\Users\Yeob&apos;s\Downloads\20180523_Lever3.zip"/>
 			<item value="C:\Users\Yeob&apos;s\Desktop\20180516_Algorithm.zip"/>
 			<item value="C:\Users\Yeob&apos;s\Desktop\algorithm.zip"/>
+		</list>
+	</section>
+	<section name="NewWizardAction">
+		<item value="org.eclipse.jdt.ui.wizards.JavaProjectWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
 		</list>
 	</section>
 </section>

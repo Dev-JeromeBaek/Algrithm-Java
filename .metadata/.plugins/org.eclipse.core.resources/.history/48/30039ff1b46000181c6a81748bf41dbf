@@ -1,0 +1,84 @@
+import java.util.Scanner;
+
+public class Q01_Main {
+	
+//	public static int nextNum(int n, int k, int d) {
+//		
+//		return 0;
+//	}
+	
+	public static void main(String[] args) {
+		try(Scanner s = new Scanner(System.in))
+		{
+			int n = s.nextInt();	// 배짱이 인원 수
+			int d = s.nextInt();	// 방향을 나타내는 수
+			int k = s.nextInt();	// 방향에따른 k번째 있는 사람 탈락
+			int j = s.nextInt();	// 
+			
+			//여기부터 작성해 주세요
+			
+			// 인원수 배열 생성
+			boolean[] peo = new boolean[n];
+			
+			// 생존 true / 탈락 false
+			for(int i=0; i<peo.length; i++) {
+				peo[i] = true;
+			}
+			int result = 0;
+			int startNum = 1;
+			int nextCount = 0;
+			for (int i=1; i<=n; i++) {
+				System.out.println("-------------------");
+				if(i != n) {
+					// 시계 방향
+					if(d == 1) {
+						
+						System.out.println("k : " + k);
+						nextCount = k + startNum;
+//						for (int p=0; p<nextCount; p++) {
+//							if(peo[p] == false) nextCount +=1; 
+//						}
+						for (int p=1; p<=nextCount; p++) {
+							int temp = 0;
+							
+							if(nextCount>n) nextCount %= n;
+							if(peo[nextCount-1] == false) {
+								System.out.println("이미 탈락");
+								nextCount += 1;
+							} else {
+								System.out.println(nextCount +"탈락 안함");
+								peo[nextCount-1] = false;
+								System.out.println("peo[" + (nextCount-1) +"] 탈락");
+								startNum = nextCount;
+								System.out.println("startNum : " + startNum);
+								System.out.println("k : " + k);
+								System.out.println("j : " + j);
+								k = k+j;
+								System.out.println("k : " + k);
+								break;
+							}
+						}
+						
+					// 반시계 방향
+					} else {
+						System.out.println("반시계방향");
+						
+						
+					}
+				// 마지막 사람 출력					
+				} else {
+					System.out.println("마지막번호");
+					for(int r=0; r<peo.length; r++) {
+						System.out.println(peo[r]);
+//						if(peo[r] == true) {
+//							result = r;
+//							break;
+//						}
+					}
+				}
+			}
+			System.out.println(result);
+			
+		}
+  }
+}
