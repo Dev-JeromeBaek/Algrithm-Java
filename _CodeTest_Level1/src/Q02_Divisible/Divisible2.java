@@ -16,9 +16,18 @@ public class Divisible2 {
 	
 	public int[] divisible(int[] array, int divisor) {
 		// ret에 array에 포함된 정수중, divisor로 나누어 떨어지는 숫자를 순서대로 넣으세요.
-		
-		int[] ret = new int[/*나누어 떨어지는 숫자의 개수*/];
-		
+		String temp = "";
+		for (int each : array) {
+			if(each%divisor == 0) {
+				temp += each+" ";
+			}
+		}
+		temp.trim();
+		String[] tempArr = temp.split(" ");
+		int[] ret = new int[tempArr.length];
+		for (int i=0; i<ret.length; i++) {
+			ret[i] = Integer.parseInt(tempArr[i]);
+		}
 		return ret;
 	}// divisible END
 	
